@@ -2,6 +2,8 @@ import datetime as dt
 
 
 DATE_MASK = "%d.%m.%Y"
+GREETING = "textes/greeting.html"
+HELP = 'textes/help.html'
 
 
 class User(object):
@@ -17,12 +19,6 @@ class User(object):
         self.failed = kwargs['failed']
         self.caught = kwargs['caught']
         self.state = kwargs['state']
-
-    def export_db(self):
-        pass
-
-    def import_db(self):
-        pass
 
     def age(self):
         return (dt.datetime.today() - self.birth_date).years
